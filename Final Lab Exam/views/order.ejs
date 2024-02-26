@@ -1,0 +1,128 @@
+<div class="profile1">
+  <h1 class="centersh">Place<span class="train"> Order</span> </h1>
+  <div class="containersign">
+    <form action="/orders" id="myform" class="orderformonly" method="post">
+      <div class="elements">
+        <label for="username">Name:</label>
+        <input type="text" name="username" id="username" <% if (user) { %>
+        value="<%= user.username %>" <% } %>/>
+      </div>
+      <div class="elements">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" <% if (user) { %>
+        value="<%= user.email %>" <% } %>/>
+      </div>
+      <div class="elements">
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" />
+      </div>
+      <div class="elements">
+        <label for="contact">Contact Number:</label>
+        <input type="text" name="contact" id="contact" />
+      </div>
+      <div class="elements">
+        <label for="date">Date:</label>
+        <input type="text" name="date" id="date" value="" readonly/>
+      </div>
+
+      <div class="flex1 ">
+        <h4>Products Selected</h4>
+        <h4>Total Items</h4>
+        <h4>Price</h4>
+      </div>
+      <div class="flex2 ">
+        <input type="text" name="items" value="<%= array.join(', ') %>" style="text-align: center;" readonly>
+        <input type="text" name="totalItems" value="<%= totalitems %>" style="text-align: center;" readonly>
+        <input type="text" name="totalPrice" value="<%= totalPrice %>" style="text-align: center;" readonly>
+      </div>
+
+
+      <div style="text-align: center;">
+        <a href="/cart">View Your Cart</a>
+      </div>
+
+
+
+      <!-- Rest of your order page content -->
+
+      <div class="signb">
+        <button type="submit">Place Order</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="vl"></div>
+</div>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Include jQuery Validation Plugin -->
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+<script>
+  // Get the current date in the format YYYY-MM-DD
+  const currentDate = new Date().toISOString().split('T')[0];
+
+  // Set the current date to the value attribute of the input field
+  document.getElementById('date').value = currentDate;
+</script>
+
+<script src="myscript.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(".orderformonly").submit(function (event) {
+      if ($(this).valid()) {
+        
+      } else {
+        // The form is not valid, prevent submission
+        
+        event.preventDefault();
+      }
+    });
+
+    $(".orderformonly").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 3,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        address: {
+          required: true,
+          minlength: 6,
+        },
+        contact: {
+          required: true,
+          minlength: 11,
+          maxlength: 11,
+          digits: true,
+        },
+      },
+      messages: {
+        username: {
+          required: "Please enter a username.",
+          minlength: "Enter a username with at least 3 characters.",
+        },
+        email: {
+          required: "Please enter your email address.",
+          email: "Enter a valid email address.",
+        },
+        address: {
+          required: "Please enter your address.",
+          minlength: "Enter an address with at least 6 characters.",
+        },
+        contact: {
+          required: "Please enter your contact number.",
+          minlength: "Enter a contact number with at least 11 digits.",
+          maxlength: "Enter a contact number with at most 11 digits.",
+          digits: "Enter only digits for the contact number.",
+        },
+      },
+    });
+  });
+</script>

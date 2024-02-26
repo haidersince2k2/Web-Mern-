@@ -1,0 +1,188 @@
+.logo img{
+    margin-left: 2rem;
+    vertical-align: top;
+    height: 30%;
+    width: 20%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.main{
+    max-width: 97vw;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.logo{
+    border:1px  solid black;
+    
+    margin-top: 1rem;
+}
+.topnev{
+    background-color: white !important; 
+  }
+  .topnev1{
+    margin-left: 7rem;
+    font-weight: bold;
+  }
+  .years{
+    height: 10% !important;
+    width: 20% !important;
+  }
+  body{
+    overflow-x: none;
+  }
+  .leftside{
+    max-width: 30%;
+  }
+  .lefttop{
+    display: flex;
+    border: 0.3px solid lightgray;
+    border-radius: 3%;
+    overflow: hidden;
+    clear: both;
+  }
+  .lefttext{
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  .rightimage img{
+    height: 70%;
+    width: 60%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  .date{
+    color: gray;
+  }
+  .city{
+    margin-left: 2rem;
+    font-size: 120%;
+    color: gray;
+  }
+ 
+  .rightside{
+    display: flex !important;
+    max-width: 70%;
+    float: right;
+    margin-top: -9rem;
+    border: none;
+  }
+  .blogflex{
+    display: flex;
+    border: none;
+    justify-content: space-between !important;
+  }
+  .card{
+    margin-right: 1rem;
+    background-color: transparent !important;
+  }
+  .lefttop1{
+    margin-top: 10rem;
+    margin-left: 3rem;
+  }
+  .lefttop1 h1{
+    padding-bottom: 12rem;
+  }
+  .card img{
+    border: 5px solid white;
+  }
+  .list{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .bussiness{
+    margin-left: 17.5rem;
+    font-weight: bold;
+  }
+  .port{
+    margin-left: 12.5rem;
+    font-weight: bold;
+  }
+  .press{
+    margin-left: 14.8rem;
+    font-weight: bold;
+  }
+  .list1{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: -29rem;
+    float: right;
+    max-width: 70%;
+  }
+  .shipping{
+    margin-left: 17rem;
+    font-weight: bold;
+  }
+  .arrivals{
+    margin-left: 7rem;
+    font-weight: bold;
+  }
+  .portal{
+    margin-left: 9.2rem;
+    font-weight: bold;
+  }
+  .rightside1{
+    display: flex !important;
+    max-width: 70%;
+    float: right;
+    margin-top: -27rem;
+    border: none;
+    margin-left: 20rem !important;
+  }
+  .list2{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: -16rem;
+    float: right;
+    max-width: 70%;
+  }
+  .newssection{
+    background-image: url(Assets/bg2.jpg) !important;
+    background-repeat: repeat;
+    
+   
+  }
+  .history{
+    margin-left: 9.5rem;
+    font-weight: bold;
+  }
+  .rightside2{
+    display: flex !important;
+    max-width: 70%;
+    float: right;
+    margin-top: -14rem;
+    border: none;
+    margin-left: 20rem !important;
+  }
+
+.col{
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid gray;
+    margin-right: 2rem;
+    min-height: 15rem !important;
+    margin-top: 2rem;
+    
+
+}
+.linkss{
+    color: white !important ;
+ }
+
+.col img{
+    width: 5rem;
+    height: 5rem;
+    margin-top: 4rem;
+}
+.tide{
+    background-image: url(Assets/PortTide_bg.png);
+    max-height: 20rem;
+    margin-top: 10rem;
+}
+.footer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: 10rem;
+ }

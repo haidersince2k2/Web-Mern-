@@ -1,0 +1,59 @@
+
+<h1 class="centersh">Contact <span class="train">Us</span> </h1>
+
+  <div class="containersign">
+    <form action="#" id="myform">
+      <div class="elements">
+        <label for="username">User Name:</label>
+        <input type="text" name="username" id="username" <% if (user) { %>
+          value="<%= user.username %>" <% } %>/>
+        
+      </div>
+      <div class="elements">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" <% if (user) { %>
+          value="<%= user.email %>" <% } %>/>
+      </div>
+      <div class="elements1">
+        <div>
+          <label for="branch">Choose Your Branch (If member):</label>
+          <select name="branches" class="branches" id="branch" >
+            <option value="lahore">None</option>
+            <option value="lahore">Lahore</option>
+            <option value="karachi">Karachi</option>
+            <option value="Sialkot">Sialkot</option>
+            <option value="islamabad">Islamabad</option>
+          </select>
+        </div>
+  
+      
+      </div>
+    <div class="elements">
+      <div class="mb-3 elements">
+        <label for="exampleFormControlTextarea1" class="form-label elements">How we can help you?</label>
+        <textarea class="form-control " id="exampleFormControlTextarea1" rows="4"></textarea>
+      </div>
+    </div>
+      <div class="signb">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="vl"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var branchElement = document.getElementById('branch');
+    var userBranch = '<%= locals.user ? locals.user.branch : "" %>';
+
+    // Set the default value based on user's branch
+    if (branchElement && userBranch) {
+      branchElement.value = userBranch;
+    }
+  });
+</script>
+
+
+
+
+
+  

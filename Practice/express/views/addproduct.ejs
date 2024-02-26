@@ -1,0 +1,45 @@
+<h1 class="centersh">Add <span class="train">Product</span></h1>
+<div class="containersign">
+  <div class="elements1">
+    <div>
+      <label for="branch">Choose Product You Want To Add:</label>
+      <select name="product" class="branches" id="product" onchange="updateFormAction()">
+        <option value="Treadmill">Treadmill</option>
+        <option value="Weight" >Weights and Dumbbells</option>
+        <option value="Mat" >Exercise Mats</option>
+        <option value="Extra" >Extras</option>
+      </select>
+    </div>
+  </div>
+  <form action="/treadmill" id="myform" method="post" enctype="multipart/form-data">
+    <div class="elements">
+      <label for="title">Title: </label>
+      <input type="text" name="title" id="title" />
+    </div>
+    <div class="elements">
+      <label for="price">Price:</label>
+      <input type="text" name="price" id="price" />
+    </div>
+    
+    <div class="elements">
+      <label for="image">Image:</label>
+      <input type="file" name="image" id="image" accept="image/*" >
+    </div>
+    <input type="hidden" name="producttype" id="producttype" value="treadmill" />
+    <div class="signb">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="vl"></div>
+
+<script>
+  function updateFormAction() {
+    const selectedProduct = document.getElementById('product').value;
+    const form = document.getElementById('myform');
+    document.getElementById('producttype').value = selectedProduct.toLowerCase();
+    
+    // Update the form action based on the selected product
+    form.action = `/${selectedProduct.toLowerCase()}`;
+  }
+</script>

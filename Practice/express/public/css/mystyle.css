@@ -1,0 +1,1004 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .navbar {
+    background-color: black;
+    color: white;
+  }
+  body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+  }
+  /* img {
+    height: 40rem;
+  } */
+  .aboutt {
+    padding-top: 1 rem;
+    padding-bottom: rem;
+    --dot-bg: black;
+    --dot-color: #716644;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    --dot-size: 3px;
+    padding-top: 2rem;
+    --dot-space: 35px;
+    color: white;
+    background: linear-gradient(
+          90deg,
+          var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      linear-gradient(
+          var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+    background-attachment: fixed;
+    
+  }
+  .txts{
+      align-items: center;
+      text-align: center;
+      margin-top: 6%;
+  }
+  .abouttt{
+      display: flex;
+  }
+  
+  .about1{
+      display: flex;
+      overflow: none;
+      height: fit-content;
+      /* flex-wrap: wrap; */
+  }
+  
+  .footer i {
+    font-size: 150%;
+    margin-right: 1rem;
+    background-color: black;
+    color: rgb(252, 252, 93);
+  }
+  .times h2 {
+    text-align: center;
+  }
+  .vl {
+    border-top: 5px solid yellow;
+    width: 98.7vw;
+    overflow: none;
+  }
+  nav {
+    opacity: 0.9;
+  }
+  .img {
+    height: 3.3rem;
+    width: 4.0rem;
+    margin-right: 10px;
+    filter: invert(100%);
+  }
+  .footer h4 {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .reasons {
+    margin-left: 10%;
+    margin-top: 2%;
+    background-color: black;
+    border-radius: 8%;
+    box-shadow: 0px 0px 5px 6px #202020;
+  
+  
+  
+    margin-right: 5%;
+  }
+  .reasons:hover {
+    box-shadow: 0px 0px 5px 6px #969595;
+    background-color: white;
+    color: black;
+  }
+  .reasons h2 {
+    align-items: center;
+    text-align: center;
+  }
+  .process {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 2%;
+  }
+  
+  .process h3 {
+    padding-top: 3%;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+  }
+  .steps {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-bottom: 5%; */
+    margin-top: 2%;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    flex-wrap: wrap;
+    /* height: 10rem; */
+    overflow: none;
+    clear: left;
+  }
+  .process1 {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-bottom: 5%; */
+    background-image: url("process1back\ .jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 3%;
+    height: auto;
+    padding-bottom: 3%;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    flex-wrap: wrap;
+    /* height: 10rem; */
+    /* overflow: none;
+      clear: left; */
+    /* background-color: black; */
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .border {
+    height: 10rem;
+    width: 10rem;
+    border: 20px solid red;
+    /* box-shadow: 5px 6px #7e7e7e; */
+  }
+  .border:hover {
+    box-shadow: 0px 0px 5px 6px #7e7e7e;
+    font-size: large;
+  }
+  
+  .steps i {
+    background-color: #ffc107;
+    border: 20px solid #ffc107;
+    border-radius: 50%;
+    font-size: 250%;
+    margin-top: 10%;
+  }
+  .steps p {
+    margin-top: 7%;
+  }
+  .right {
+    font-family: "Josefin Slab";
+    /* min-height: 100vh; */
+    overflow: none;
+  }
+  
+  .right h2 {
+    color: white;
+    float: right;
+    margin-right: 3%;
+    margin-top: 19rem;
+    font-size: 200%;
+  }
+  .right h1 {
+    color: yellow;
+    float: right;
+    clear: right;
+    margin-right: 2%;
+    justify-content: last baseline;
+    /* overflow: none; */
+    font-size: 300%;
+  }
+  .right p {
+    color: white;
+    float: right;
+    clear: right;
+    margin-right: 6%;
+    font-size: 120%;
+  }
+  .right button {
+    color: white;
+    float: right;
+    clear: right;
+    margin-right: 6%;
+    font-size: 120%;
+  }
+  
+  .right {
+    float: right;
+    background-color: black;
+    width: 100%;
+    background-image: url("/assets/comfortzone.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: end;
+    /* height: fit-content; */
+    overflow: none;
+    position: static;
+    padding-bottom: 4.3rem;
+    background-attachment: fixed;
+    overflow: none;
+  }
+  .right1 {
+    background-color: black;
+    width: 100%;
+    background-image: url("offerback2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: end;
+    display: flex;
+    height: fit-content;
+    overflow: none;
+    position: static;
+    padding-bottom: 4rem;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  .height {
+    margin-top: 37.3rem;
+    overflow: none;
+  }
+  .form {
+    background-color: black;
+    opacity: 0.92;
+    color: white;
+    float: right;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 3%;
+  
+    margin-top: 0%;
+    margin-right: 5%;
+    margin-left: 50rem;
+  }
+  .right1 span {
+    float: left;
+    font-size: x-large;
+    margin-top: 2rem;
+  }
+  .mamarginforbutton {
+    margin-left: 2rem;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    padding-bottom: 2rem;
+  }
+  .form div {
+    opacity: 1;
+  }
+  .form button {
+    float: right;
+  }
+  
+  .form-control {
+    background-color: rgb(107, 106, 106);
+  }
+  .form button {
+    color: white;
+  }
+  .text {
+    position: absolute;
+    z-index: -10;
+  }
+  .text h2 {
+    margin-top: 5rem;
+    color: white;
+    font-weight: bolder;
+    margin-left: 1rem;
+    background-color: yellow;
+  }
+  .text p {
+    margin-top: 2rem;
+    color: white;
+    align-items: flex-start;
+    background-color: yellow;
+    /* max-width: 30rem */
+  }
+  .pricing {
+    
+  
+    /* background-image: url("/assets/pricingback1.jpg"); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 2%;
+    padding-left: 2%;
+  
+  }
+  .price {
+    display: flex;
+   
+   
+  }
+  
+  /* */
+  .carousel-caption {
+    float: right;
+  }
+  .float-right {
+    float: right;
+    clear: both;
+    background-color: rgb(57, 57, 52);
+  }
+  .carousel-item p {
+    font-size: 2rem;
+    margin-right: 1.875rem;
+  }
+  .carousel-item h2 {
+    font-size: 2.5rem;
+    margin-right: 3.125rem;
+  }
+  
+  .carousel-item button {
+    font-size: 1.2rem;
+    color: white;
+    margin-right: 3.125rem;
+  }
+  .buttonss {
+    display: flex;
+    clear: both;
+    float: right;
+  }
+  .hl {
+    border-left: 10px solid #ffc107;
+    height: 30vh;
+    float: right;
+  
+    margin-bottom: -10.8rem;
+    clear: both;
+  }
+  .flex {
+    display: flex;
+  }
+  
+  .imgss{
+      min-height: 40%;
+      min-width: 40%;
+      margin-right: 1%;
+      margin-left: 1%;
+      margin-top: 2%;
+      
+      
+  }
+  .pricing h2{
+      color: black;
+      justify-content: center;
+      padding-top: 1rem;
+      text-align: center;
+  }
+ 
+  .pricing button{
+      background-color: #ffc107;
+      color: white;
+      border: none;
+  }
+  .pricing h1{
+      padding-bottom: 2.5rem;
+  }
+  
+  .footer button{
+    background-color: #ffc107;
+    color: white;
+  }
+  .whats-app {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 38px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+   
+    left: 15px;
+    z-index: 100;
+  }
+  
+  .my-float {
+    margin-top: 10px;
+  }
+  
+  
+
+ 
+  form a{
+    margin-right: 4%;
+    justify-content: center;
+   
+    margin-top: 0.3rem;
+  }
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ffc107; /* Set a background color */
+    color: black;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+
+    
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    color: white;
+  }
+ 
+  #myform{
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+  input{
+    justify-content: center;
+  }
+  label{
+    display: block;
+  }
+  .signb button{
+    margin-top: 15px;
+   
+  }
+  .signb{
+    color: #ffc107;
+    background-color: #ffc107;
+  }
+  #myform .error {
+    color: #ff0000;
+    /* border: 1px solid red; */
+    
+  }
+  #myform {
+   
+    border-radius: 4px;
+  }
+  #myform label,
+  #myform input,
+  #myform textarea,
+  #myform button {
+    border: 0;
+    margin-bottom: 3px;
+    display: block;
+    width: 100%;
+  }
+  #myform input,
+  #myform textarea{
+   min-height: 2rem;
+  }
+  #myform input ,
+  #myform textarea {
+    line-height: 25px;
+    background: #202020;
+    color: white;
+    padding: 0 6px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  
+  #myform button {
+    height: 30px;
+    line-height: 30px;
+    background: #ffc107;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  .containersign{
+   margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%; 
+  }
+  .membership{
+    min-height: 100vh;
+    background-image: url("/assets/membership.jpg ");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+  }
+  .membership h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 23%;
+  }
+  .elements{
+    margin-top: 2%
+  }
+  .branches{
+    background-color: black;
+    color: white;
+    padding: 3px;
+   
+  }
+  .elements1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  .login-class{
+    margin-top: 7rem;
+  }
+  .flex1{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .card{
+    background-color: #202020 !important;
+    color: white !important;
+    border: none !important;
+  }
+  .card-body{
+    background-color: #202020 !important;
+    color: white !important;
+    border: none !important
+  }
+  .centersh{
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 2.1rem;
+    text-align: center;
+  }
+  .train{
+    color:#ffc107;
+  }
+  .names{
+    color:#ffc107;
+    margin-top: 3rem;
+    font-size: x-large;
+  }
+  .qualities li{
+    list-style-type: none;
+
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+  }
+ .qualities  .fa-regular {
+    margin-left: 0rem;
+    margin-right: 0.3rem;
+    color: green;
+  }
+  .card-body .qualities{
+    margin-left: -5rem;
+    margin-top: 3rem;
+  }
+  .card-body .names{
+    margin-left: -2rem
+  }
+  .btn1{
+    margin-right: 1.5rem !important;
+  }
+  /* Add this style for the "Go to Top" button */
+  /* Add styles for the welcome screen */
+.welcome-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.welcome-content {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.welcome-content h2 {
+  color: black;
+}
+.welcome-content h4 {
+  color: black;
+}
+
+.welcome-content button {
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  margin-left: 15rem;
+  margin-top: -5rem;
+  font-size: larger;
+}
+.welcome-content a{
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ffc107;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  }
+  #toggleBtn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.cardsp {
+  text-align: center;
+}
+
+ .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  align-items: center;
+} 
+
+.list-unstyled li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-unstyled li i {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.divp{
+  margin-top: 2rem;
+  justify-content: space-between;
+  color: white;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.divp .btn{
+  border: none !important;
+  border-radius: 0%;
+  background-color: white;
+  color: black;
+}
+.fa-circle-user{
+  font-size: xx-large;
+  color: #ffc107;
+  padding-right: 1rem;
+ 
+}
+.fa-cart-shopping{
+  font-size: xx-large;
+  color: #ffc107;
+  padding-right: 1rem;
+ 
+}
+/* .welcome{
+  background-color: #ffc107;
+  justify-content: center;
+  text-align: center;
+  position: static;
+} */
+.fa-circle-user:hover{
+  color: #969595;
+}
+.fa-cart-shopping:hover{
+  color: #969595 !important;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile img {
+  color: #ffc107 !important;
+  filter: invert(70%);
+}
+
+.welcomediv {
+  background-color: #ffc107;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  max-height: 1.5rem;
+  z-index: 1000; /* Set a high z-index to make sure it's on top of other elements */
+}
+.landingpage{
+  display: flex;
+  flex-direction: column
+}
+.item1{
+  margin-top: 4.3rem !important;
+}
+.fa-circle-check{
+  color:  green;
+}
+.fw-dark{
+  opacity: 1.6;
+}
+.cardpri{
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+.small{
+  color: #ffc107;
+  font-size: 60%;
+}
+.center{
+  margin-top: -1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.center1{
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  
+}
+.center1 button{
+    background-color: #ffc107;
+    color: white;
+    border: none;
+
+}
+.treadmile{
+  display: flex
+
+}
+
+.fa-circle-minus{
+  color: red;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+.pricest{
+  margin-left: 8rem !important;
+}
+.profile1 .flex1{
+  margin-top: 2rem;
+  margin-left: -5rem;
+}
+.profile1 .flex2{
+  display: flex;
+  margin-bottom: 2rem;
+}
+.productdetail{
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  max-height: fit-content;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 15rem;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.details, .price {
+  margin: 0;
+  color: black;
+  text-align: center;
+  justify-content: center;
+}
+
+.product-actions {
+  /* background-color: #f4f4f4; */
+  padding: 10px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn1 {
+  margin-right: 5px;
+}
+.stitched img {
+  height: 20rem;
+  width: 20rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  
+}
+.stitched .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+ 
+
+}
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.stitched {
+  margin-bottom: 4px;
+  
+}
+.colorp{
+  background-color:rgb(30, 29, 29);
+  margin-top: 2rem;
+}
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.elements1{
+  text-align: center;
+}
+.elements1 img{
+  height: 20rem;
+  width: 20rem;
+  margin-left: 2rem;
+
+  
+}
+
+.filters{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.filter-container{
+  min-width: 30%;
+}
+.fa-filter{
+  color: #ffc107;
+  font-size: x-large;
+  padding: 0.5rem;
+  margin-left: 2rem
+}
+
+.searchicon form{
+  max-height: 2rem;
+ 
+  float: right;
+  margin-bottom: 1rem;
+}
+/* Add this to your CSS */
+.product.search-match {
+  display: block !important;
+}
+.containerflash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  z-index: 100000; /* Ensure a higher z-index than the navbar */
+  margin-top: 3rem !important;
+  
+}
+
+
+.alert {
+  
+  position: fixed;
+  width: 100%;
+  z-index: 100000; 
+  margin-top: 6rem;
+  text-align: center;
+
+  
+}
+.fa-magnifying-glass{
+  background-color: #ffc107;
+  color: white;
+  padding: 0.4rem;
+  padding: 0.4rem;
+  /* font-size: large */
+  border-radius: 10%;
+  /* margin-bottom: 1rem */
+  margin-top: -1rem;
+
+}
+
+.divp button.active1{
+  border-bottom: 10px solid #ffc107;
+  
+  transition: all 0.5s; /* Add a transition for a smoother effect */
+}
+/* Styles for the buttons */
+.btnsp {
+  padding: 10px;
+  margin: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles for the 'active1' class */
+.active1 {
+ 
+  color: #333 !important;
+  border-top-color: red;
+  border-top: 1rem;
+  color: red !important;
+}
+
+/* Optional: Hover effect for buttons */
+.btnsp:hover {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+;

@@ -1,0 +1,16 @@
+.recipie1{
+  
+    margin: 2rem;
+}
+h1{
+    margin-left: 1rem;
+}
+.add-btn{
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+.rows{
+    justify-content: center;
+    text-align: center;
+    padding-left: 10rem;
+}

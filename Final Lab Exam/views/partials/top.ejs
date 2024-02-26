@@ -1,0 +1,93 @@
+ <div class="landingpage" id="#navbars">
+
+    
+    <div class="welcomediv item1">
+        
+      <% if (user) { %>
+        <div class="welcome">
+          <p>Welcome <%= user.username %></p>
+        </div>
+
+        <% } else { %>
+           <p>User not logged in.</p> 
+          <% } %>
+    </div>
+    <div class="item2">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <img src="/assets/logo1.png" alt="" class="img" />
+        <a class="navbar-brand" href="/home">Real Fitness</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/trainer">Trainers</a>
+            </li>
+
+
+
+            <% if (!user || (user && user.role !== "admin")) { %>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/contact-us">Contact us</a>
+              </li>
+            <% } else if (user && user.role === "admin") { %>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/products">Manage Products</a>
+              </li>
+            <% } %>
+            
+           
+          </ul>
+
+
+
+
+          <% if (user && user.role == "admin") { %>
+            <!-- Admin content -->
+            <button class="btn btn-success btn1" onclick="location.href = '/addproduct';">Add New Products</button>
+            <button class="btn btn-danger btn1" onclick="location.href = '/logout';">Log Out</button>
+
+          <% } else if (user && user.role == "user") { %>
+            <!-- User content -->
+            <button class="btn btn-danger btn1" onclick="location.href = '/logout';">Log Out</button>
+
+            <a class="nav-link active" aria-current="page" href="/profile"><i class="fa-regular fa-circle-user"></i></a>
+            <a class="nav-link active" aria-current="page" href="/cart"> <i class="fa-solid fa-cart-shopping "></i></a>
+
+            
+          <% } else { %>
+            <!-- Default content -->
+            <button class="btn btn-warning btn1" onclick="location.href = '/login';">Log In</button>
+            <button class="btn btn-success btn1" onclick="location.href = '/signup';">Register</button>
+            <a class="nav-link active" aria-current="page" href="/cart"> <i class="fa-solid fa-cart-shopping "></i></a>
+
+          
+          <% } %>
+           
+
+
+
+
+
+
+
+        
+
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>

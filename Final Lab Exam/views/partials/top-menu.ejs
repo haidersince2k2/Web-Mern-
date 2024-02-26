@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/mystyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <script src="/public/js/myscript.js"></script>
+
+  <title>Your Page Title</title>
+</head>
+
+<body>
+
+   <div class="landingpage" id="#navbars">
+    <div class="welcomediv item1">
+      <% if (user) { %>
+        <div class="welcome">
+          <p>Welcome <%= user.username %></p>
+        </div>
+
+        <% }   %>
+           
+    </div>
+    <div class="item2">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <img src="/assets/logo1.png" alt="" class="img" />
+        <a class="navbar-brand" href="/home">Real Fitness</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link  " aria-current="page" href="/home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/trainer">Trainers</a>
+            </li>
+
+
+
+            <% if (!user || (user && user.role !== "admin")) { %>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/products/treadmills">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/contact-us">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/calculator">Calculator</a>
+              </li>
+            <% } else if (user && user.role === "admin") { %>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/products/treadmills">Manage Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/orders">Orders</a>
+              </li>
+            <% } %>
+            
+           
+          </ul>
+
+
+
+
+          <% if (user && user.role == "admin") { %>
+            <!-- Admin content -->
+            <button class="btn btn-success btn1" onclick="location.href = '/addproduct';">Add New Products</button>
+            <button class="btn btn-danger btn1" onclick="location.href = '/logout';">Log Out</button>
+
+          <% } else if (user && user.role == "user") { %>
+            <!-- User content -->
+            <button class="btn btn-danger btn1" onclick="location.href = '/logout';">Log Out</button>
+
+            <a class="nav-link " aria-current="page" href="/profile"><i class="fa-regular fa-circle-user"></i></a>
+            <a class="nav-link " aria-current="page" href="/cart"> <i class="fa-solid fa-cart-shopping "></i></a>
+
+            
+          <% } else { %>
+            <!-- Default content -->
+            <button class="btn btn-warning btn1" onclick="location.href = '/login';">Log In</button>
+            <button class="btn btn-success btn1" onclick="location.href = '/signup';">Register</button>
+            <a class="nav-link " aria-current="page" href="/cart"> <i class="fa-solid fa-cart-shopping "></i></a>
+
+          
+          <% } %>
+           
+
+
+
+
+
+
+
+        
+
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+</body>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <i class="fa-solid fa-angle-up"></i>
+</button>
+
+<!-- Content of your page goes here -->
+
+<!-- Add your other scripts here -->
+<!-- Include jQuery first -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Include jQuery Validate -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<!-- Your custom script -->
+<script src="/public/js/myscript.js"></script>
+
+<!-- Your additional scripts -->
+
+<script type="text/javascript">
+  // Add this script for "Go to Top" button functionality
+  window.addEventListener("scroll", function () {
+    var mybutton = document.getElementById("myBtn");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  });
+
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+</script>
+
+<!-- Add this script in the head section or at the end of the body -->
+<!-- Add this script at the end of the body -->
+<script type="text/javascript">
+  $(document).ready(function() { 
+     $(".nav-link").click(function(event) { 
+        // Remove "active" class from all nav-links
+         $(".nav-link").removeClass("active");
+        // Add "active" class to the clicked nav-link
+        $(this).addClass("active");
+   });
+  });
+</script>
+
+
+
+
+
+
+</html>

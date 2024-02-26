@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Progress Bar</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .progress-bar {
+    width: 100px;
+    height: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar::before {
+    content: attr(data-progress) '%';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    font-weight: bold;
+  }
+
+  .progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #1c2737 0%, #a2bde4 100%);
+    animation: fill-progress 2s ease-in-out forwards;
+  }
+
+  @keyframes fill-progress {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="progress-bar-container">
+  <div class="progress-bar" data-progress="0">
+    <div class="progress-fill"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const progressBar = document.querySelector(".progress-bar");
+    const fill = document.querySelector(".progress-fill");
+
+    // Get the current progress value (e.g., from a server request)
+    const currentProgress = 30; // Change this to your desired progress value
+
+    progressBar.setAttribute("data-progress", currentProgress);
+    fill.style.width = currentProgress + "%";
+  });
+</script>
+</body>
+</html>

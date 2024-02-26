@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+  <body onload="welcomeFunction()">
+    <div class="landingpage" id="#navbars">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <img src="assets\logo1.png" alt="" class="img" />
+          <a class="navbar-brand" href="index.html">Real Fitness</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Branches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Trainers</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a href="">Login </a>
+
+              <a href="Signup.html">Signup</a>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-warning" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators" d>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div>
+            <div class="carousel-inner" ata-bs-interval="10">
+              <div class="carousel-item active">
+                <img src="assets\pic1.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="hl"></div>
+                  <h2 class="float-right">Get the body you want.</h2>
+                  <p class="float-right">
+                    Make yourself stronger than your excuses.
+                  </p>
+                  <div class="buttonss">
+                    <button class="btn btn-warning">SEE OUR TRAINERS</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" ata-bs-interval="10">
+                <img src="assets\pic2.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block flex">
+                  <div class="hl"></div>
+                  <h2 class="float-right">Make yourself proud.</h2>
+                  <p class="float-right">The only bad workout is no workout.</p>
+                  <div class="buttonss">
+                    <button class="btn btn-warning">SEE OUR BRANCHES</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" ata-bs-interval="10">
+                <img src="assets\pic3.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <div class="hl"></div>
+                  <h2 class="float-right">Hustle for the muscle.</h2>
+                  <p class="float-right">Every day is a choice.</p>
+                  <div class="buttonss">
+                    <button class="btn btn-warning" onclick="location.href = 'Signup.html';">JOIN US TODAY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="vl"></div>
+     
+      <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Real Fitness</h2>
+        <h4>Welcome to Real Fitness</h4>
+        <a href="Signup.html">Join Us Today</a>
+      </div>
+      <div class="aboutt">
+        <figure class="figure">
+          <div class="abouttt">
+            <div class="imgss">
+              <img
+                src="assets\equipment.jpg"
+                class="figure-img img-fluid rounded"
+                alt="..."
+                wi
+              />
+            </div>
+            <div class="txts">
+              <h2>Equipment</h2>
+              <p>
+                At Real Fitness, we are dedicated to transforming your fitness
+                aspirations into reality. Our range of fitness equipment is
+                meticulously designed to cater to all your exercise needs,
+                whether you’re a beginner or a seasoned athlete. From treadmills
+                that propel you towards your cardio goals to weightlifting
+                apparatus that build strength, our high-quality products ensure
+                a holistic workout experience. Join us on the path to a
+                healthier lifestyle, backed by the reliability of Real Fitness.
+              </p>
+            </div>
+          </div>
+        </figure>
+        <figure class="figure">
+          <div class="abouttt">
+            <div class="txts">
+              <h2>Community Cares</h2>
+              <p>
+                Welcome to our vibrant gym community, where support is the
+                foundation of our fitness journey. Join us to experience a
+                welcoming atmosphere filled with like-minded individuals. Our
+                monthly challenges keep you motivated and striving for your
+                goals, while our online platforms proudly showcase your
+                transformation to inspire others.
+              </p>
+            </div>
+            <div class="imgss">
+              <img
+                src="assets\community.jpg"
+                class="figure-img img-fluid rounded"
+                alt="..."
+                wi
+              />
+            </div>
+          </div>
+        </figure>
+
+        <figure class="figure">
+          <div class="abouttt">
+            <div class="imgss">
+              <img
+                src="assets\trainers.jpg"
+                class="figure-img img-fluid rounded"
+                alt="..."
+                wi
+              />
+            </div>
+            <div class="txts">
+              <h2>Personal Training At Its Best</h2>
+              <p>
+                Our personalized training program is designed to help you
+                achieve your fitness goals efficiently. Our expert trainers not
+                only guide you through effective workouts but also provide
+                tailored diet charts to optimize your progress. Attain your
+                fitness potential with our transformative program. Start your
+                journey today.
+              </p>
+            </div>
+          </div>
+        </figure>
+        <figure class="figure">
+          <div class="abouttt">
+            <div class="txts">
+              <h2>Our Amenities</h2>
+              <p>
+                Experience a gym like no other with our top-notch amenities.
+                Store your belongings in secure lockers, then unwind in our
+                pool, jacuzzi, and sauna. Treat yourself to a rejuvenating
+                massage at our spa or grab a healthy refreshment at our health
+                bar. Our well-maintained shower facilities ensure you leave
+                feeling refreshed and ready to conquer the day. Discover the
+                perfect balance of fitness and relaxation at Real Fitness.
+              </p>
+            </div>
+            <div class="imgss">
+              <img
+                src="assets\amenities.png"
+                class="figure-img img-fluid rounded"
+                alt="..."
+                wi
+              />
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="vl"></div>
+      <div class="right">
+        <h2>GET OUT OF YOUR</h2>
+        <h1>
+          <b>COMFORT ZONE</b>
+        </h1>
+        <p>
+          Success usually comes to those who are too busy to be looking for it.
+          <br />
+          The body achieves what the mind believes.
+        </p>
+        <button type="button" class="btn btn-warning" onclick="location.href = 'Signup.html';">JOIN US TODAY</button>
+      </div>
+
+      <div class="vl height"></div>
+      <div class="vl"></div>
+      <div class="process container-fluid">
+        <h3>Our Process</h3>
+        <div class="steps col-12">
+          <div class="goal border col-3">
+            <i class="fa-solid fa-bullseye"></i>
+            <p>Analyze Your Goals</p>
+          </div>
+          <div class="work border col-3">
+            <i class="fa-solid fa-flask"></i>
+            <p>Work Hard On It</p>
+          </div>
+          <div class="improve border col-3">
+            <i class="fa-solid fa-compass"></i>
+            <p>Improve Yourself</p>
+          </div>
+          <div class="acheive border col-3">
+            <i class="fa-regular fa-gem"></i>
+            <p>Acheive Goals</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="vl"></div>
+      <div class="pricing">
+        <!-- <h2 > <u>Our Pricing </u></h2> -->
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Monthly</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  Rs 5,000<small class="text-body-secondary fw-light"
+                    >/mo</small
+                  >
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Awesome Community</li>
+                  <li>Personal Fitness Program</li>
+                  <li>Nutrition Check-in</li>
+                  <li>Great Coaching</li>
+                  <li>Free Trial Class</li>
+                  <li>Car Parking</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary" onclick="location.href = 'Signup.html';">
+                  Join Us Today
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Quarterly</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  Rs 18,000<small class="text-body-secondary fw-light"
+                    >/qr</small
+                  >
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Awesome Community</li>
+                  <li>Personal Fitness Program</li>
+                  <li>Nutrition Check-in</li>
+                  <li>Great Coaching</li>
+                  <li>Swimming Pool, Sauna & Car Parking</li>
+                  <li>Sauna & Car Parking</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary" onclick="location.href = 'Signup.html';">
+                  Join Us Today
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Yearly</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  Rs 50,000<small class="text-body-secondary fw-light"
+                    >/yr</small
+                  >
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Awesome Community</li>
+                  <li>Personal Fitness Program</li>
+                  <li>Nutrition Check-in</li>
+                  <li>Great Coaching</li>
+                  <li>Swimming Pool & Jacuzzi</li>
+                  <li>Sauna, Mini Bar & Lockers</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary"  onclick="location.href = 'Signup.html';">
+                  Join Us Today
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vl"></div>
+
+      <div class="footer">
+        <div class="container">
+          <footer class="py-5">
+            <div class="row">
+              <div class="col-8 col-md-4 mb-5">
+                <h1>Real Fitness</h1>
+                <h4>Eat Sleep, Gym, and Repeat.</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur quisquam quis quos quae dignissimos tempore,
+                  accusamus, repellat a tenetur fuga atque! Dolorem asperiores
+                  deserunt placeat ad ullam consectetur accusamus amet.
+                </p>
+              </div>
+
+              <div class="col-6 col-md-2 mb-3">
+                <h5>Useful Links</h5>
+                <ul class="nav flex-column linkss">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Home</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Branches</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Pricing</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">Trainers</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0">About Us</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden"
+                      >Email address</label
+                    >
+                    <input
+                      id="newsletter1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Email address"
+                    />
+                    <button class="btn btn-warning" type="button">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="container-fluid times">
+              <h2>OPENING HOURS</h2>
+              <table
+                class="table table-dark table-striped border-warning tables"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Opening Time</th>
+                    <th scope="col">Closing Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Monday</td>
+                    <td>11:00 Am</td>
+                    <td>08:00 Pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Tuesday</td>
+                    <td>10:00 Am</td>
+                    <td>09:00 Pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Wednesday</td>
+                    <td>10:00 Am</td>
+                    <td>10:00 Pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Thursday</td>
+                    <td>11:00 Am</td>
+                    <td>08:00 Pm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Friday</td>
+                    <td>Off Day</td>
+                    <td>Off Day</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Saturday</td>
+                    <td>11:00 Am</td>
+                    <td>06:00 Pm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+            >
+              <p>© 2023 Real Fitness, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </ul>
+            </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+              Top
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div class="vl"></div>
+      <a class="whats-app" href="https://web.whatsapp.com/" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      setTimeout(function open(event) {
+        document.querySelector(".popup").style.display = "block";
+      }, 2000);
+    });
+
+    document.querySelector("#close").addEventListener("click", function () {
+      document.querySelector(".popup").style.display = "none";
+    });
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+  
+</html>

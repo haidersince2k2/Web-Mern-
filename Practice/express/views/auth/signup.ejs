@@ -1,0 +1,80 @@
+
+
+
+<h1 class="centersh">Membership<span class="train"> Form</span> </h1>
+
+<div class="containersign">
+  <form action="/signup" id="myform" method="post">
+    <div class="elements">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" value="ali_haider" />
+    </div>
+    <div class="elements">
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email" value="haider@gmail.com"/>
+    </div>
+    
+    <div class="elements1">
+      <div>
+        <label for="branch">Choose a Branch:</label>
+        <select name="branch" class="branches" id="branch">
+          <option value="Lahore">Lahore</option>
+          <option value="Karachi">Karachi</option>
+          <option value="Sialkot">Sialkot</option>
+          <option value="Islamabad">Islamabad</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="package">Choose a package:</label>
+        <select name="package" class="branches" id="package">
+          <option value="Monthly">Monthly</option>
+          <option value="Quarterly">Quarterly</option>
+          <option value="Yearly">Yearly</option>
+        </select>
+      </div>
+    </div>
+    <div class="elements">
+      <label for="password1">Password:</label>
+      <input type="password" name="password1" id="passwords" value="12345678"/>
+      <i class="far fa-eye-slash" id="togglePassword"></i>
+    </div>
+    <div class="elements">
+      <input type="hidden" name="role" id="role" value="user"/>
+    </div>
+    
+    <div class="signb">
+      <button type="submit">Register</button>
+    </div>
+  </form>
+</div>
+<div class="vl"></div>
+<script>
+  const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#passwords");
+
+  togglePassword.addEventListener("click", function () {
+      // toggle the type attribute
+      const type = password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      
+      // toggle the icon class
+      this.classList.toggle("fa-eye-slash");
+      this.classList.toggle("fa-eye");
+  });
+
+  const toggleConfirmPassword = document.querySelector("#toggleConfirmPassword");
+  
+  const confirm_password = document.querySelector("#confirm_password");
+
+  toggleConfirmPassword.addEventListener("click", function () {
+      // toggle the type attribute
+      const type = confirm_password.getAttribute("type") === "password" ? "text" : "password";
+      confirm_password.setAttribute("type", type);
+      
+      // toggle the icon class
+      this.classList.toggle("fa-eye-slash");
+      this.classList.toggle("fa-eye");
+  });
+</script>
+

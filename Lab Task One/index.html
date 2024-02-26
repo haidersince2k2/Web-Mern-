@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Membership Form</h1>
+      <form action="" id="myform">
+        <div>
+          <label for="name">First name: </label>
+          <input type="text" name="name" id="name" />
+          
+        </div>
+        <div>
+          <label for="lname">Last name: </label>
+          <input type="text" name="lname" id="lname" />
+          
+        </div>
+        <div>
+          <label for="username">Username: </label>
+          <input type="text" name="username" id="username" />
+          
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password: </label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <label for="confirm password"> Confirm Password:</label>
+          <input type="password" name="Cpassword" id="Cpassword" />
+        </div>
+        <div class="elements1">
+          <div>
+            <label for="branch">Choose a Branch:</label>
+            <select name="branches" class="branches" id="branch">
+            <option value="lahore">Lahore</option>
+            <option value="karachi">Karachi</option>
+            <option value="Sialkot">Sialkot</option>
+            <option value="islamabad">Islamabad</option>
+          </select>
+          </div>
+         
+          <div>
+            <label for="branch">Choose a package:</label>
+            <select name="branches" class="branches" id="branch">
+              <option value="lahore">Monthly</option>
+              <option value="karachi">Quartely</option>
+              <option value="Sialkot">Yearly</option>
+              
+            </select>
+          </div>
+        </div>
+        <div>
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  <script src="myscript.js"></script>
+</html>

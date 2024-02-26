@@ -1,0 +1,36 @@
+<h1 class="centersh">Log <span class="train">In</span> </h1>
+<div class="login-class">
+  <div class="containersign">  
+    <form action="/login" id="myform" method="post">
+      <div class="elements">
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" value="haider@gmail.com"/>
+      </div>
+      <div class="elements">
+        <label for="password1">Password:</label>
+        <input type="password" name="password1" id="passwords" value="12345678"/>
+        <i class="far fa-eye-slash" id="togglePassword"></i>
+      </div>
+     
+      <div class="signb">
+        <button type="submit">Log In</button>
+      </div>
+    </form>
+  </div>
+  <div class="vl"></div>
+  
+
+  <script>
+     const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#passwords");
+
+  togglePassword.addEventListener("click", function () {
+      // toggle the type attribute
+      const type = password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      
+      // toggle the icon class
+      this.classList.toggle("fa-eye-slash");
+      this.classList.toggle("fa-eye");
+  });
+  </script>

@@ -1,0 +1,55 @@
+<div class="profile1">
+    <h1 class="centersh">My <span class="train">Profile</span> </h1>
+    <div class="profile">
+        <img src="/assets/usericon.png" alt="usericon" class="uicon">
+    </div>
+    <div class="containersign">
+        <form action="/signup" id="myform" method="post">
+          <div class="elements">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" <%  %>
+                value="<%= user.username %>" <%  %> />
+          </div>
+          <div class="elements">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" <%  %>
+            value="<%= user.email %>" <%  %>/>
+          </div>
+          <div class="elements1">
+            <div>
+                <div class="flex">
+                <label for="package">Branch: &nbsp;</label><span><%  %><%=  user.branch %> <%  %></span>
+            </div>
+            </div>
+      
+            <div>
+                <div class="flex">
+                    <label for="package">Package: &nbsp;</label><span><%  %><%=  user.package %> <%  %></span>
+                </div>
+            </div>
+          </div>
+          <div class="elements">
+            <label for="password1">Password:</label>
+            <input type="password" name="password1" id="passwords" value="12345678"/>
+            <i class="far fa-eye-slash" id="togglePassword"></i>
+          </div>
+          
+          
+        </form>
+      </div>
+      <div class="vl"></div>
+</div>
+<script>
+    const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#passwords");
+
+  togglePassword.addEventListener("click", function () {
+      // toggle the type attribute
+      const type = password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      
+      // toggle the icon class
+      this.classList.toggle("fa-eye-slash");
+      this.classList.toggle("fa-eye");
+  });
+</script>

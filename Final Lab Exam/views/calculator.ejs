@@ -1,0 +1,52 @@
+<form action="/calculate" method="post">
+    <div class="formcalc">
+        <div class="operand1">
+            <label for="operand1">Operand 1</label>
+            <input type="text" name="operand1" id="operand1" required>
+        </div>
+        <div class="operation">
+            <label for="operation">Operation</label>
+            <select class="form-select" name="operation" aria-label="Default select example">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+        </div>
+        <div class="operand2">
+            <label for="operand2">Operand 2</label>
+            <input type="text" name="operand2" id="operand2" required>
+        </div>
+    </div>
+    <div class="button">
+        <button type="submit" class="btn btn-success cal" onclick="window.location.href = '/calculator';">Calculate</button>
+    </div>
+</form>
+<table class="table table-striped-rows">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Operand 1</th>
+            <th scope="col">Operation</th>
+            <th scope="col">Operand 2</th>
+            <th scope="col">Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (results && results.length > 0) { %>
+            <% results.forEach((result, index) => { %>
+                <tr>
+                    <th scope="row"><%= index + 1 %></th>
+                    <td><%= result.operand1 %></td>
+                    <td><%= result.operation %></td>
+                    <td><%= result.operand2 %></td>
+                    <td><%= result.result %></td>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <tr>
+                <td colspan="5"><h3>No previous data</h3></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>

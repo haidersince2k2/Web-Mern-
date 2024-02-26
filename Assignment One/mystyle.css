@@ -1,0 +1,399 @@
+#cvimg {
+  
+  width: 50%;
+  height: 50%;
+  /* float: right; */
+  border-radius: 50%;
+ 
+  border: 3px solid rgb(183, 179, 179);
+  margin-left: 24%;
+  margin-top: 3%;
+  
+}
+.img{
+  /* background-color: #1c2737; */
+  position: relative;
+  z-index: -30;
+  
+}
+.icons{
+  size: 100%;
+  color:white;
+ 
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.leftside {
+  max-width: 30%;
+  background-color: black;
+  color: white;
+  position: sticky;
+  z-index: 10;
+  
+}
+
+#maincv {
+  background-color: white;
+  display: flex;
+  
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style-type: none;
+}
+.vl {
+  border-left: 1px solid black;
+  height: 100vh;
+}
+.contactlist li:hover{
+  font-size: 120%;
+  cursor: pointer;
+  color: grey;
+}
+li a:active{
+  
+  color: grey;
+}
+/* li a:visited{
+  color: red;
+} */
+.center{
+  /* align-items: center; */
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+.contact li {
+  display: flex;
+  
+}
+.contacts{
+  margin-top: 3%;
+  /* text-align: center; */
+  font-size: 110%;
+  margin-left: 9%;
+  margin-bottom: 3%;
+}
+
+.icons {
+  margin-right: 10%; 
+  /* background-color: white; */
+  border-radius: 50%;
+  /* border: 1.3px solid white; */
+  padding: 0.7px;
+  color:rgb(255, 166, 0);
+}
+.language{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+.aligncenter{
+ margin-left: 35px;
+}
+
+
+.padding{
+  padding-left: 3%;
+}
+.rightside{
+  
+  width: 70%;
+  /* justify-content: center; */
+  align-items: center;
+ 
+  z-index: 20;
+  background-color: rgb(225, 223, 223);
+}
+.rightside h2{
+  margin-left: 3.5%;
+}
+.center1{
+  text-align: center;
+}
+.labelsleft{
+ 
+  /* border: 2px solid yellow; */
+  color: white;
+  margin-left: 9%;
+  max-width: 94%;
+  justify-content: center;
+  /* align-items: center;
+ text-align: center; */
+}
+.labelsright{
+ 
+
+  color: black;
+ 
+  max-width: 94%;
+ 
+}
+.exper{
+  display: flex;
+}
+.education{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.graduation{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.labelsright i{
+  font-size: 70%;
+  
+  text-align: center;
+  margin-right: 2%;
+  align-items: baseline;
+}
+.graduation i{
+  margin-right: 1rem;
+  color: #1c2737;
+ 
+
+
+}
+progress {
+  width: 150px;
+  height : 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1.3px solid rgb(255, 166, 0);
+  
+}
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 10px;
+}
+progress::-webkit-progress-value {
+  background-color: rgb(255, 166, 0);
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-radius: 10px;
+}
+.mern{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+@property --progress-value {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes html-progress {
+  to { --progress-value: 92; }
+}
+
+@keyframes css-progress {
+  to { --progress-value: 87; }
+}
+
+@keyframes js-progress {
+  to { --progress-value: 73; }
+}
+
+@keyframes another-progress {
+  to { --progress-value: 35; }
+}
+
+.progress-bar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  /* to center the percentage value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) '%';
+}
+
+.html {
+  background: 
+    radial-gradient(closest-side,black 79%, transparent 80% 100%),
+    conic-gradient(rgb(255, 166, 0) calc(var(--progress-value) * 1%), white 0);
+    
+  animation: html-progress 2s 1 forwards;
+}
+
+.html::before {
+  animation: html-progress 2s 1 forwards;
+}
+
+.css {
+  background: 
+    radial-gradient(closest-side, black 79%, transparent 80% 100%, white 0),
+    conic-gradient(rgb(255, 166, 0) calc(var(--progress-value) * 1%), white 0);
+  animation: css-progress 2s 1 forwards;
+}
+
+.css::before {
+  animation: css-progress 2s 1 forwards;
+}
+
+.js {
+  background: 
+    radial-gradient(closest-side, black 79%, transparent 80% 100%, white 0),
+    conic-gradient(rgb(255, 166, 0)  calc(var(--progress-value) * 1%), white 0);
+  animation: js-progress 2s 1 forwards;
+}
+
+.js::before {
+  animation: js-progress 2s 1 forwards;
+}
+
+body {
+  /* font-family: -apple-system, system-ui, Helvetica, Arial, sans-serif; */
+  /* margin: 30px auto; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* max-width: 600px; */
+}
+.langs {
+  text-align: center;
+}
+
+.language progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.percentagesdiv{
+  display: flex;
+  /* justify-content: ; */
+  justify-content: space-around;
+  align-items: center;
+}
+.per{
+  margin-left: 10%;
+  color:  #000307;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+.name{
+  background-color:rgb(255, 166, 0);
+  height: 100px;
+  position: relative;
+  z-index: 20;
+  margin-top: 8   px;
+  color:white;
+  margin-bottom: 15px;
+  overflow-x: visible;
+  /* text-align: center; */
+  position: relative;
+ 
+  
+
+}
+
+.fname{
+        margin-left: 30%;
+}
+.lname{
+  margin-left: 36%;
+}
+.numbers{
+  font-family: 'Courier New', Courier, monospace;;
+  font-weight: bold;
+}
+.interests{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-left: 4%;
+}
+.interests i{
+  font-size: 130%;
+  margin-top: 8%;
+  color: #1c2737;
+}
+.interests div{
+  display: flex;
+  
+  /* justify-content: space-between;  */
+   align-items: center;
+
+  text-align: center;
+
+}
+.interests p{
+ 
+  margin-left: 10%;
+  margin-top: 15%;
+}
+.headicons i{
+  float: left;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 100%;
+  padding: 3px;
+ 
+}
+.education i{
+   color: rgb(0,89,255);
+   color: rgb(255, 166, 0);
+   /* color: rgb(192,114,0); */
+   /* background-color: white; */
+  /* color: #FF7800;
+  color: #006aff90; */ 
+  /* border: 1px solid  rgb(0, 0, 0); */
+  border-radius: 50%;
+  
+}
+.skills{
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.contact a{
+  color: white;
+}
+.hrline{
+  color: rgb(255, 166, 0);
+}
+hr{
+  
+  margin-top: 5px;
+  height: 2px;
+  color: rgb(255, 166, 0);
+  background-color:  rgb(255, 166, 0);
+  border-width: 0;
+  margin-left: 30px
+}
+.webdeveloper{
+  margin-left: 51%;
+}
+.skills h3{
+  margin-right: 25px;
+  width: 80px;
+}
+.skills progress{
+  margin-left: 20px;
+}
+;

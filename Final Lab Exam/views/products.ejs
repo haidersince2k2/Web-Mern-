@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ion-rangeslider@2.3.1/css/ion.rangeSlider.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://unpkg.com/ion-rangeslider@2.3.1/js/ion.rangeSlider.min.js"></script>
+  <title>Product Showcase</title>
+</head>
+
+<body>
+
+  <h1 class="centersh">Our <span class="train">Products</span></h1>
+
+  <div class="flex divp">
+    <button class="btn btn-primary btnsp" onclick="location.href = '/products/treadmills/?page=1&priceRange=1000-50000'">Treadmills</button>
+    <button class="btn btn-primary btnsp" onclick="location.href = '/products/weights/?page=1&priceRange=1000-50000';">Weights And Dumbbells</button>
+    <button class="btn btn-primary btnsp" onclick="location.href = '/products/mats/?page=1&priceRange=1000-500000';">Exercise Mats</button>
+    <button class="btn btn-primary btnsp" onclick="location.href = '/products/extras/?page=1&priceRange=1000-500000';">Extras</button>
+  </div>
+  <div class="vl"></div>
+
+  <div class="colorp">
+
+    <div class="filters">
+      <div class="filter-container">
+        <label for="priceRange">Filter by Price:</label>
+        <input type="text" id="priceRange" name="priceRange" value="" />
+        <span id="selectedPrice"></span>
+      </div>
+
+      <div class="searchicon">
+        <label for="search">Search by Title:</label>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchtext">
+          <a type="button" onclick="performSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+        </form>
+      </div>
+    </div>
+    <div class="vl"></div>
+
+    <div class="row">
+      <% if (typeof products !== 'undefined' && products.length > 0) { %>
+        <% for (let index = 0; index < products.length; index++) { %>
+          <div class="col-lg-4 col-md-4 col-sm-6 product" data-price="<%= products[index].price %> "  data-title="<%= products[index].title %> ">
+            <div class="stitched">
+              <% if (products[index].imageData) { %>
+                <img src="data:image/jpeg;base64,<%= products[index].imageData.toString('base64') %>" alt="Product Image">
+              <% } %>
+              <p class=" title price">Title: <%= products[index].title %></p>
+              <p class="price"> Price: <%= products[index].price %> &nbsp;PKR</p>
+            </div>
+            <div class="display">
+              <% if (user && user.role == "admin") { %>
+                <form action="/<%= productType %>delete/<%= products[index]._id %>" method="get">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-danger btn1">Delete</button>
+                </form>
+                <button class="btn btn-warning btn1" onclick="location.href = '/products/<%= products[index].producttype %>/update<%= productType %>/<%= products[index]._id %>';">Update</button>
+              <% } else { %>
+                <button class="btn btn-warning" onclick="location.href = '/<%= productType %>cart/<%= products[index]._id %>';">Add to cart</button>
+                <button class="btn btn-danger" onclick="location.href = '/order?totalPrice=' + encodeURIComponent('0') + '&totalitems=' + encodeURIComponent('1') + '&array=' + encodeURIComponent(JSON.stringify(['<%= products[index].title %>']));">Buy Now</button>
+              <% } %>
+            </div>
+          </div>
+        <% } %>
+      <% } else { %>
+        <p>No products available.</p>
+      <% } %>
+    </div>
+
+  </div>
+  <div class="page" id="parentid">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" id="previous">
+        <a class="page-link" href="/products/<%= productType %>s/<%= currentPage - 1 %>" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+
+      <% for (let i = 1; i <= totalPages; i++) { %>
+        <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+          <a class="page-link" href="/products/<%= productType %>s/<%= i %>"><%= i %></a>
+        </li>
+      <% } %>
+
+      <li class="page-item">
+        <a class="page-link" href="/products/<%= productType %>s/<%= currentPage + 1 %>" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+ 
+  
+
+  <div class="vl"></div>
+
+  <script>
+    function performSearch() {
+      var searchText = document.getElementById('searchtext').value.toLowerCase();
+        console.log(searchText);
+
+        $('.product').each(function () {
+          const title = $(this).data('title').toLowerCase(); // Convert to lowercase for case-insensitive comparison
+          if (title.includes(searchText)) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      }
+    function filterProductsByPrice() {
+      const priceRange = $("#priceRange").val();
+      updateLocationHref(priceRange);
+    }
+
+    function updateLocationHref(priceRange, selectedColor) {
+      // Get the current page number from the existing URL
+      const currentPage = new URLSearchParams(window.location.search).get('page') || 1;
+
+      // Replace semicolons with hyphens in the priceRange
+      const formattedPriceRange = priceRange.replace(';', '-');
+
+      // Construct the new URL with the updated formattedPriceRange, color, and current page
+      const newUrl = `/products/<%= productType%>s?page=${currentPage}&priceRange=${encodeURIComponent(formattedPriceRange)}`;
+
+      // Update the location.href
+      window.location.href = newUrl;
+    }
+
+    $(document).ready(function () {
+      const priceRange = $("#priceRange");
+
+      // Initialize the Ion Range Slider
+      priceRange.ionRangeSlider({
+        type: "double",
+        grid: true,
+        min: 1000,
+        max: 50000, // Adjust the max value as needed
+        from: <%= minPrice %>,
+        to: <%= maxPrice %>,
+        step: 50,
+        postfix: "PKR",
+        onFinish: function (data) {
+          const selectedPrice = data.from + "-" + data.to;
+          $("#selectedPrice").text(selectedPrice);
+
+          // Update the location.href when the selected price changes
+          updateLocationHref(selectedPrice);
+        },
+      });
+        
+
+      
+    });
+    
+  </script>
+
+</body>
+
+</html>
